@@ -58,6 +58,7 @@ class ClickFast extends React.Component {
   this.timerFoundation = this.timerFoundation.bind(this);
   this.timerStart = this.timerStart.bind(this);
   this.finalScore = this.finalScore.bind(this);
+  this.refreshGame = this.refreshGame.bind(this);
 }
 
 componentDidMount() {
@@ -88,6 +89,13 @@ timerStart() {
     clearInterval(this.timer);
   }
 }
+refreshGame() {
+  this.setState({disabled: false});
+  this.setState({GameStart: false});
+  this.timer = 0;
+  this.setState({seconds: 10})
+  this.setState({Count: 0})
+}
 
 finalScore() {
   if (this.state.Count<= 20) {
@@ -111,9 +119,12 @@ render() { return(
   <div key = 'Click'>
     {this.state.Info.quote}
     <div>
-    { (this.state.disabled)? 
-      <div> 
-        {this.finalScore()}
+    { (this.state.disabled)?
+      <div>
+        <div> 
+          {this.finalScore()}
+        </div>
+        <button onClick={() => this.refreshGame()} >Retry</button>
       </div>
     :
       this.state.GameStart ?
