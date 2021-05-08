@@ -99,19 +99,19 @@ refreshGame() {
 
 finalScore() {
   if (this.state.Count<= 20) {
-    return (<div><div>wow my grandma could click faster than you.</div> <div>your final score was {this.state.Count} clicks per second</div></div>);
+    return (<div><div>wow my grandma could click faster than you.</div> <div>your final score was {this.state.Count} clicks per 10 seconds</div></div>);
   }
   if (this.state.Count > 20 && this.state.Count <= 50) {
-    return (<div><div>I know you can click faster than that!</div> <div>your final score was {this.state.Count} clicks per second</div></div>); 
+    return (<div><div>I know you can click faster than that!</div> <div>your final score was {this.state.Count} clicks per 10 seconds</div></div>); 
   }
   if (this.state.Count > 50 && this.state.Count <= 70) {
-    return (<div><div> You've got some fast fingers! </div> <div>your final score was {this.state.Count} clicks per second</div></div>);
+    return (<div><div> You've got some fast fingers! </div> <div>your final score was {this.state.Count} clicks per 10 seconds</div></div>);
   }
   if (this.state.Count > 70 && this.state.Count <= 80) {
-    return (<div><div>GODLY FINGERS.</div> <div>your final score was {this.state.Count} clicks per second</div></div>);
+    return (<div><div>GODLY FINGERS.</div> <div>your final score was {this.state.Count} clicks per 10 seconds</div></div>);
   }
   if (this.state.Count > 80) {
-    return (<div><div>You've got to be a bot, theres no other way lol.</div> <div>your final score was {this.state.Count} clicks per second</div></div>)
+    return (<div><div>You've got to be a bot, theres no other way lol.</div> <div>your final score was {this.state.Count} clicks per 10 seconds</div></div>)
   }
 }
 
